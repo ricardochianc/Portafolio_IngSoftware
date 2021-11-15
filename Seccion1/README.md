@@ -1,6 +1,6 @@
 # Sección 1
 
-!(Logo)[https://cdn-icons-png.flaticon.com/512/645/645979.png]
+![Logo](https://cdn-icons-png.flaticon.com/512/645/645979.png)
 
 ## Artefacto elegido:
 
