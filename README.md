@@ -21,7 +21,7 @@ Este portafolio consta de 5 secciónes y 1 sección Preliminar que contiene el e
 - [Sección 1](https://github.com/ricardochianc/Portafolio_IngSoftware/tree/main/Seccion1)
 - [Sección 2](https://github.com/ricardochianc/Portafolio_IngSoftware/tree/main/Seccion2)
 - [Sección 3](https://github.com/ricardochianc/Portafolio_IngSoftware/tree/main/Seccion3)
-- Sección 4
-- Sección 5
+- [Sección 4](https://github.com/ricardochianc/Portafolio_IngSoftware/tree/main/Seccion4)
+- [Sección 5](https://github.com/ricardochianc/Portafolio_IngSoftware/tree/main/Seccion5)
 
 >Edgar Ricardo Chian Cruz | 1103916
