@@ -15,7 +15,7 @@ Este repositorio se creó con el objetivo de recopilar y almacenar los artefacto
 
 Estás preguntas se responden con el fin de justificar porqué se eligió cada artefacto y evaluar el conocimiento adquirido durante el curso.
 
-Este portafolio consta de 5 secciónes o módulos.
+Este portafolio consta de 5 secciónes y 1 sección Preliminar que contiene el enunciado del presente proyecto.
 
 - Sección 1
 - Sección 2
