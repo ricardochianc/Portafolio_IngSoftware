@@ -18,6 +18,30 @@ Se realizó un buen trabajo en grupo, pero nuevamente como en la sección anteri
 
 #### 3. Red semántica de conceptos de ingeniería de software asociadas al artefacto.
 
+>La arquitectura de software promueve los atributos de calidad (requerimientos no funcionales) que el sistema debe soportar. Los atributos de calidad son propiedades del sistema de información que lo hacen “bueno” o “malo” desde una perspectiva técnica.
+
+>Existen dos tipos de atributos de calidad: 
+> - Los que son medidos en tiempos de corrida
+> - Los que son estimados por la inspección.
+
+>A continuación una breve descripción de los atributos de calidad.
+> 1. Rendimiento: Medida del tiempo de respuesta del sistema para un requerimiento funcional.
+> 2. Disponibilidad: Cantidad de tiempo que el sistema está arriba y corriendo. Se mide por la cantidad de tiempo entre caídas, como el tiempo que le toma al sistema reiniciarse después de una caída
+> 3. Confiabilidad: Es la habilidad del sistema de operar en el tiempo. Se mide en el tiempo medio de fallo de un sistema
+> 4. Funcionalidad: Habilidad de un sistema de realizar la tarea para el que fue creado.
+> 5. Usabilidad: Qué tan fácil es para un usuario entender y operar el sistema.
+> 6. Seguridad: Habilidad del sistema de resistirse a intentos de acceso no autorizados y denegar el servicio a ataques mientras les da servicio a usuarios autorizados
+> 7. Modificable: La medida de qué tan fácil es cambiar el sistema para incorporar nuevos requerimientos. Se mide en costo y tiempo. Si el costo es muy alto, aunque el tiempo sea aceptable, este aspecto será medido negativamente.
+> 8. Portabilidad: Mide qué tan fácil el sistema puede ser trasladado entre diferentes plataformas (corrida, código fuente, librerías, componentes).
+> 9. Reutilización: facilidad de reutilizar porciones del sistema en otras aplicaciones.
+> 10.Integración Facilidad de un sistema de integrarse con otros.
+> 11. Sujeto a pruebas: Qué tan fácil puede el sistema ser sometido a pruebas humanas.
+> 12. Variabilidad: Qué tan bien la arquitectura puede manejar nuevos requerimientos planeados o no planeados
+> 13. Subconjunto de cambios: El sistema debe soportar un conjunto de características que puedan incrementarse en funcionalidad en el tiempo
+> 14. Integridad conceptual: Es la habilidad de la arquitectura de comunicar una visión clara y concisa del sistema.
+> 15. Ser construido: Que la arquitectura pueda ser construida con el presupuesto, personal y tiempo disponible de entrega del proyecto.
+
+
 #### 4. ¿Cómo contribuyó la ingeniería de software a mi misión de convertirme en ingeniero en informática y sistemas?
 
 En lo personal tenía una leve idea de las pruebas de rendimiento, en qué consisten, como se realizan, pero nunca había tenido la experiencia de realizarlas.
