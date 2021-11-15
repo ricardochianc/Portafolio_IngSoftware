@@ -1,6 +1,6 @@
 # Portafolio Ingeniería de Software I (Proyecto Final)
 
-![Logotipo Universidad Rafael Landívar](https://josealvarez97.github.io/images/logo_universidad_rafael_landivar.png)
+![Logotipo Universidad Rafael Landívar](https://consystec-dev.com/TEMPORAL/URL/logourl.png)
 
 >Un repositorio es: *"Cualquier cosa o persona que se considera como centro de acumulación o almacenamiento, una especie de base de datos que actúa como el centro de acumulación y almacenamiento de información relacionada con la ingeniería de software".* (Ruta de aprendizaje, semana 13)
 
