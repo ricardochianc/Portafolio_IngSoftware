@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Plan de Pruebas" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables definidas por el Usuario" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Pruebas Kolb" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador Bucle" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Landing - /-28" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">kolb.donaldleiva.com</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">navigate</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">none</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-User" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                <stringProp name="Header.value">?1</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">document</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Home - /home-32" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">kolb.donaldleiva.com</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/home</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">navigate</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://kolb.donaldleiva.com/</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-User" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                <stringProp name="Header.value">?1</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">document</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Preguntas - /kolb/questions-37" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">kolb.donaldleiva.com</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/kolb/questions</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://kolb.donaldleiva.com/home</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="X-XSRF-TOKEN" elementType="Header">
+                <stringProp name="Header.name">X-XSRF-TOKEN</stringProp>
+                <stringProp name="Header.value">eyJpdiI6IlpVWVJJaDZDb0Mwa1lGeTlnME9xVkE9PSIsInZhbHVlIjoiZVB2aUVXbUdUWElWZ01wSEQybGNHVkVFUFl5MVlKVnV0Z1NTUE56dDlJM05xTG5YcStQdnRCZ0dIV1VhQzRzMiIsIm1hYyI6IjhiMDgxNDM4YTZkMDYxODE4ZGNkZDQ1NzJjYzM4NDU3MmRmZmMyM2RkODA5YWI3NmZhNjU4ZDJkNGRhNzQ0YWMifQ==</stringProp>
+              </elementProp>
+              <elementProp name="X-Requested-With" elementType="Header">
+                <stringProp name="Header.name">X-Requested-With</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mandar resultados /kolb/results-71" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;questions&quot;:[{&quot;id&quot;:1,&quot;description&quot;:&quot;Cuando aprendo&quot;,&quot;answers&quot;:[{&quot;id&quot;:4,&quot;question_id&quot;:1,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Me gusta estar haciendo cosas&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:2,&quot;question_id&quot;:1,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Me gusta observar y escuchar&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:3,&quot;question_id&quot;:1,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Me gusta pensar en las ideas&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:1,&quot;question_id&quot;:1,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Me gusta tratar con mis sentimientos&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:2,&quot;description&quot;:&quot;Aprendo mejor cuando&quot;,&quot;answers&quot;:[{&quot;id&quot;:8,&quot;question_id&quot;:2,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Trabajo arduamente para hacer las cosas&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:6,&quot;question_id&quot;:2,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Escucho y observo cuidadosamente&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:5,&quot;question_id&quot;:2,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Confío en mis corazonadas y sentimientos&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:7,&quot;question_id&quot;:2,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Me apoyo en el razonamiento lógico&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:3,&quot;description&quot;:&quot;Cuando estoy aprendiendo&quot;,&quot;answers&quot;:[{&quot;id&quot;:11,&quot;question_id&quot;:3,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Tiendo a razonar las cosas&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:12,&quot;question_id&quot;:3,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Soy responsable&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:10,&quot;question_id&quot;:3,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Soy callado y reservado&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:9,&quot;question_id&quot;:3,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Tengo sentimientos y reacciones fuertes&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:4,&quot;description&quot;:&quot;Aprendo por medio de&quot;,&quot;answers&quot;:[{&quot;id&quot;:15,&quot;question_id&quot;:4,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;El razonamiento&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:14,&quot;question_id&quot;:4,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;La observación&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:16,&quot;question_id&quot;:4,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;La acción&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:13,&quot;question_id&quot;:4,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Los sentimientos&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:5,&quot;description&quot;:&quot;Cuando aprendo&quot;,&quot;answers&quot;:[{&quot;id&quot;:20,&quot;question_id&quot;:5,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Me gusta experimentar con las cosas&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:19,&quot;question_id&quot;:5,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Me gusta analizar las cosas, dividirlas en partes&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:17,&quot;question_id&quot;:5,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Soy abierto a nuevas experiencias&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:18,&quot;question_id&quot;:5,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Me fijo en todos los aspectos del asunto&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}}]},{&quot;id&quot;:6,&quot;description&quot;:&quot;Cuando estoy aprendiendo&quot;,&quot;answers&quot;:[{&quot;id&quot;:23,&quot;question_id&quot;:6,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Soy lógico&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:24,&quot;question_id&quot;:6,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Soy activo&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:22,&quot;question_id&quot;:6,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Soy observador&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:21,&quot;question_id&quot;:6,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Soy intuitivo&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:7,&quot;description&quot;:&quot;Aprendo mejor de&quot;,&quot;answers&quot;:[{&quot;id&quot;:26,&quot;question_id&quot;:7,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;La observación&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:28,&quot;question_id&quot;:7,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;La oportunidad para intentar y practicar&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:25,&quot;question_id&quot;:7,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Las relaciones personales&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:27,&quot;question_id&quot;:7,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Teorías racionales&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:8,&quot;description&quot;:&quot;Cuando aprendo&quot;,&quot;answers&quot;:[{&quot;id&quot;:32,&quot;question_id&quot;:8,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Me gusta ver resultados en mi trabajo&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:30,&quot;question_id&quot;:8,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Me tomo mi tiempo antes de actuar&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:31,&quot;question_id&quot;:8,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Me gustan las ídeas y las teorías&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:29,&quot;question_id&quot;:8,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Me siento involucrado personalmente en las cosas&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:9,&quot;description&quot;:&quot;Aprendo mejor cuando&quot;,&quot;answers&quot;:[{&quot;id&quot;:36,&quot;question_id&quot;:9,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Puedo intentarlo por mí mismo&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:35,&quot;question_id&quot;:9,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Confío en mis ideas&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:34,&quot;question_id&quot;:9,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Me apoyo en mis observaciones&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:33,&quot;question_id&quot;:9,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Confío en mis sentimientos&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:10,&quot;description&quot;:&quot;Cuando estoy aprendiendo&quot;,&quot;answers&quot;:[{&quot;id&quot;:40,&quot;question_id&quot;:10,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Soy responsable&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:38,&quot;question_id&quot;:10,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Soy reservado&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:39,&quot;question_id&quot;:10,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Soy racional&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:37,&quot;question_id&quot;:10,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Soy receptivo&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:11,&quot;description&quot;:&quot;Cuando aprendo&quot;,&quot;answers&quot;:[{&quot;id&quot;:42,&quot;question_id&quot;:11,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Me gusta observar&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}},{&quot;id&quot;:41,&quot;question_id&quot;:11,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Me involucro&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:44,&quot;question_id&quot;:11,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Me gustar estar activo&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:43,&quot;question_id&quot;:11,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Evalúo las cosas&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}}]},{&quot;id&quot;:12,&quot;description&quot;:&quot;Aprendo mejor cuando&quot;,&quot;answers&quot;:[{&quot;id&quot;:45,&quot;question_id&quot;:12,&quot;learning_type_id&quot;:1,&quot;description&quot;:&quot;Soy receptivo y amplio de criterio&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:1,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experiencia Concreta (\&quot;Sentimientos\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EC&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fcdabe ${result}%, #fde3ce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #fc8368;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;Esta etapa del ciclo de aprendizaje enfatiza su relación personal con la gente en situaciones diarías. En esta etapa, usted tiende a confiar más en sus sentimientos que en un enfoque sistemático de los problemas y las situaciones. En una situación de aprendizaje, usted confía más en su criterio amplio y en su adaptabilidad a los cambios.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:47,&quot;question_id&quot;:12,&quot;learning_type_id&quot;:3,&quot;description&quot;:&quot;Analizo las ideas&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:3,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Conceptualización Abstracta (\&quot;Razonamiento\&quot;)&quot;,&quot;abbreviation&quot;:&quot;CA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #befcbe ${result}%, #cefdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #079407;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa, el aprendizaje comprende el uso de la lógica y de las ideas, más que los sentimientos, para comprender los problemas o las situaciones. Por lo general, usted confía en la planificación sistemática y desarrolla teorías e ideas para resolver problemas.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:48,&quot;question_id&quot;:12,&quot;learning_type_id&quot;:4,&quot;description&quot;:&quot;Soy práctico&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:4,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Experimentación Activa (\&quot;Acción\&quot;)&quot;,&quot;abbreviation&quot;:&quot;EA&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #c1dffd ${result}%, #cee6fd ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.4em;margin: 1em 0;background: #70c9e9;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div&gt;El aprendizaje en esta etapa toma una forma activa; se experimenta con el hecho de influir o cambiar situaciones. Usted tiene un enfoque práctico y un interés por lo que realmente funciona, en oposición a la mera observación de una situación. Usted aprecia el cumplimiento de las cosas y le gusta ver los resultados de su influencia e ingenuidad.&lt;/div&gt;\r\n&lt;/div&gt;&quot;}},{&quot;id&quot;:46,&quot;question_id&quot;:12,&quot;learning_type_id&quot;:2,&quot;description&quot;:&quot;Soy cuidadoso&quot;,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;learning_type&quot;:{&quot;id&quot;:2,&quot;test_id&quot;:1,&quot;description&quot;:&quot;Observación Reflexiva (\&quot;Observación\&quot;)&quot;,&quot;abbreviation&quot;:&quot;OR&quot;,&quot;details&quot;:&quot;&lt;div class=\&quot;h-100 p-4\&quot; style=\&quot;background: linear-gradient(0deg, #fdfdbf ${result}%, #fdfdce ${result}%);\&quot;&gt;\r\n&lt;div class=\&quot;text-center\&quot;&gt;&lt;img class=\&quot;w-100\&quot; src=\&quot;img/${abbreviation}.png\&quot; alt=\&quot;${description}\&quot; /&gt;&lt;/div&gt;\r\n&lt;h1 class=\&quot;h4 font-weight-bold\&quot; style=\&quot;color: #fff !important;font-size: 1.3em;margin: 1em 0;background: #f6b541;padding: 5px 10px;border-radius: 10px;\&quot;&gt;${description} (${abbreviation}): ${result}%&lt;/h1&gt;\r\n&lt;div class=\&quot;text-justify\&quot;&gt;En esta etapa del ciclo de aprendizaje, la gente comprende las ideas y situaciones provenientes de distintos puntos de vista. En una situación de aprendizaje usted confía en la paciencia, la objetividad y un juicio cuidadoso pero no toma necesariamente ninguna acción. Confía en sus propios pensamientos y sentimientos para formular opiniones.&lt;/div&gt;\r\n&lt;div&gt;&quot;}}]}]}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">kolb.donaldleiva.com</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/kolb/results</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">cors</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://kolb.donaldleiva.com/home</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+              </elementProp>
+              <elementProp name="Origin" elementType="Header">
+                <stringProp name="Header.name">Origin</stringProp>
+                <stringProp name="Header.value">https://kolb.donaldleiva.com</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="X-XSRF-TOKEN" elementType="Header">
+                <stringProp name="Header.name">X-XSRF-TOKEN</stringProp>
+                <stringProp name="Header.value">eyJpdiI6ImpSVUtDNWVCZDBEMEZONFpwTllrSlE9PSIsInZhbHVlIjoiYitXQmZYYXJzV055dTVYYjRxMVIxV3RcLytBYXRnNWFjcHd2b2pLcjN0WDNPM2k0a3UxSEJcL2xLNUtrQ0JiVm1iIiwibWFjIjoiOTY0NDE2MzE3NGYwMTdlZGQ0MDA5ZDliOWM0NThhZGZkODA5YjRkMWUzMjUzOTYyMzA0ZGVkZmVmY2Y4YjZiMSJ9</stringProp>
+              </elementProp>
+              <elementProp name="X-Requested-With" elementType="Header">
+                <stringProp name="Header.name">X-Requested-With</stringProp>
+                <stringProp name="Header.value">XMLHttpRequest</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json;charset=utf-8</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">empty</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">XSRF-TOKEN</stringProp>
+                <stringProp name="Header.value">eyJpdiI6IlhXeWhRSDRpS0k4Zkd2VEtuU0RpRkE9PSIsInZhbHVlIjoiV0t6ZXZ5WlBSbWc0XC82bVpacXBIbFVxRjJHSzQ0VlpTWTBDZnY5d2lNQyt3NE14VWNXaDRqRks3TnNzcnEwREkiLCJtYWMiOiJkNTA2ZGYzMDA0YWEyMjNkMTc3MmMxMTA3YWUwODkyNjVlZDg4NzJkZjExNTY0N2JiNjA2MWNhOWFjMWJhOWYwIn0=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Cookie</stringProp>
+                <stringProp name="Header.value">X-XSRF-TOKEN=eyJpdiI6IlhXeWhRSDRpS0k4Zkd2VEtuU0RpRkE9PSIsInZhbHVlIjoiV0t6ZXZ5WlBSbWc0XC82bVpacXBIbFVxRjJHSzQ0VlpTWTBDZnY5d2lNQyt3NE14VWNXaDRqRks3TnNzcnEwREkiLCJtYWMiOiJkNTA2ZGYzMDA0YWEyMjNkMTc3MmMxMTA3YWUwODkyNjVlZDg4NzJkZjExNTY0N2JiNjA2MWNhOWFjMWJhOWYwIn0%3D; estilos_de_aprendizaje_de_kolb_session=eyJpdiI6InNBd1FNK00rU0NVR01zSzBWU3Raa3c9PSIsInZhbHVlIjoiSzBybkxnMDNcL3h3bGorZ1wvMmdzb1ZpNUJuNERheHBYTFZcL29razcza0tJK2N4dnZ1YUIwYzB2T0RxK29Gcm43WCIsIm1hYyI6ImNlNmY1YzdlZmNkODVmOTZmNTkyY2MzYmM0NGYyZThmZDUwYzM3MWFjYTI4MzY4MzE4MzBlNzg4ZjliYzc4YmMifQ%3D%3D</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mis Resultados - /kolb/myresults-56" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="token" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">token</stringProp>
+                <stringProp name="Argument.value">BTpu5lj82v8K8vB1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">kolb.donaldleiva.com</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/kolb/myresults</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">navigate</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://kolb.donaldleiva.com/home</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-User" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                <stringProp name="Header.value">?1</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">document</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mis Resultados /kolb/myresults-60" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="token" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.name">token</stringProp>
+                <stringProp name="Argument.value">BTpu5lj82v8K8vB1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">kolb.donaldleiva.com</stringProp>
+          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/kolb/myresults</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gestor de Cabecera HTTP" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                <stringProp name="Header.value">navigate</stringProp>
+              </elementProp>
+              <elementProp name="Referer" elementType="Header">
+                <stringProp name="Header.name">Referer</stringProp>
+                <stringProp name="Header.value">https://kolb.donaldleiva.com/home</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Site" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                <stringProp name="Header.value">same-origin</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Language" elementType="Header">
+                <stringProp name="Header.name">Accept-Language</stringProp>
+                <stringProp name="Header.value">en-US,en;q=0.5</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-User" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-User</stringProp>
+                <stringProp name="Header.value">?1</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8</stringProp>
+              </elementProp>
+              <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                <stringProp name="Header.value">1</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0</stringProp>
+              </elementProp>
+              <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                <stringProp name="Header.value">document</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Informe Agregado" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="Servidor Proxy HTTP" enabled="true">
+        <stringProp name="ProxyControlGui.port">8888</stringProp>
+        <collectionProp name="ProxyControlGui.exclude_list">
+          <stringProp name="997245502">(?i).*\.(bmp|css|js|gif|ico|jpe?g|png|swf|woff|woff2|txt)</stringProp>
+        </collectionProp>
+        <collectionProp name="ProxyControlGui.include_list"/>
+        <boolProp name="ProxyControlGui.capture_http_headers">true</boolProp>
+        <intProp name="ProxyControlGui.grouping_mode">0</intProp>
+        <boolProp name="ProxyControlGui.add_assertion">false</boolProp>
+        <stringProp name="ProxyControlGui.sampler_type_name"></stringProp>
+        <boolProp name="ProxyControlGui.sampler_redirect_automatically">false</boolProp>
+        <boolProp name="ProxyControlGui.sampler_follow_redirects">true</boolProp>
+        <boolProp name="ProxyControlGui.use_keepalive">true</boolProp>
+        <boolProp name="ProxyControlGui.detect_graphql_request">true</boolProp>
+        <boolProp name="ProxyControlGui.sampler_download_images">false</boolProp>
+        <intProp name="ProxyControlGui.proxy_http_sampler_naming_mode">0</intProp>
+        <stringProp name="ProxyControlGui.default_encoding"></stringProp>
+        <stringProp name="ProxyControlGui.proxy_prefix_http_sampler_name">resultados </stringProp>
+        <stringProp name="ProxyControlGui.proxy_pause_http_sampler"></stringProp>
+        <boolProp name="ProxyControlGui.notify_child_sl_filtered">false</boolProp>
+        <boolProp name="ProxyControlGui.regex_match">false</boolProp>
+        <stringProp name="ProxyControlGui.content_type_include"></stringProp>
+        <stringProp name="ProxyControlGui.content_type_exclude"></stringProp>
+      </ProxyControl>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
