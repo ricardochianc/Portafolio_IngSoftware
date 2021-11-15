@@ -41,6 +41,7 @@ Se realizó un buen trabajo en grupo, pero nuevamente como en la sección anteri
 > 14. Integridad conceptual: Es la habilidad de la arquitectura de comunicar una visión clara y concisa del sistema.
 > 15. Ser construido: Que la arquitectura pueda ser construida con el presupuesto, personal y tiempo disponible de entrega del proyecto.
 
+> _fuente: ATRIBUTOS DE CALIDAD DE SOFTWARE, semana 9
 
 #### 4. ¿Cómo contribuyó la ingeniería de software a mi misión de convertirme en ingeniero en informática y sistemas?
 
