@@ -4,15 +4,23 @@
 
 ## Artefacto elegido:
 
-**[Laboratorio Carro de vela](https://github.com/ricardochianc/Portafolio_IngSoftware/blob/Seccion2/Seccion2/Jamboard%20grupo%204.pdf)**
+**[Laboratorio: Carro de vela](https://github.com/ricardochianc/Portafolio_IngSoftware/blob/Seccion2/Seccion2/Jamboard%20grupo%204.pdf)**
 
 >Adicional: Reto de modelación y simulación
 >[Modelo Prescriptivo -  Juego 1](https://prezi.com/view/J5WfPsIhbEsSKzzmk91P/) y [Modelo Ágil - Juego 3](https://prezi.com/view/PLCaJxl0iqlfePuEt6cW/)
 
 #### 1. ¿Por qué se eligió el artefacto?
 
+Al igual que en la sección anterior, me pareció una forma muy dinámica de poner en práctica los conocimientos adquiridos hasta el momento.
+Realizando un "proyecto" sencillo, como la construcción de un carro que fuera impulsado por una vela. Este problema se resolvió usando un modelo ágil y a pesar de que el grupo era pequeño, cada integrante tenía un rol establecido y cumplía con una función a lo largo del laboratorio.
+Como se ha dicho, en los modelos ágiles cualquier cosa que nos ayude a llevar un orden y progreso de las tareas puede ser un "dashboard de progreso", en nuestro caso, el grupoo utilizó el Jamboard asignado para crear un "backlog" y llevar un control de las tareas.
+
 #### 2. Si tuviera que volver a producir el artefacto, ¿qué cambiaría? ¿Qué mejoraría?
+
+Mejoraría las conclusiones finales del reporte, ya que todo el desarrollo del laboratorio fue satisfactorio, sin embargo las conclusiones del reporte final se pudieron haber hecho de mejor manera.
 
 #### 3. Red semántica de conceptos de ingeniería de software asociadas al artefacto.
 
 #### 4. ¿Cómo contribuyó la ingeniería de software a mi misión de convertirme en ingeniero en informática y sistemas?
+
+Los modelos ágiles han demostrado mejores resultados y es la que más se acopla al objetivo de la ingeniería de software, es importante saber analizar un problema y plantear la manera más optima de resolverlo con los recursos que se tienen. Es importante recordar que la metodología ágil no solo es SCRUM, entonces es bueno que hayan este tipo de ejercicios donde se de la libertad de analizar el problema y elegir el modelo más adecuado.
