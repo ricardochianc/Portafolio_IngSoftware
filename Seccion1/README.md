@@ -23,10 +23,14 @@ Considero que está muy completo ya que era inicios del ciclo y el tiempo no hab
 
 > La ingeniería es una disciplina que se apoya de un conjunto de conocimientos de tipo técnico, científico y práctico. Una de sus ramas es la Ingeniería de Software que tiene como objetivo desarrollar software eficiente, confiable, que contribuya con la resolución de un problema, y que este se encuentre dentro de un presupuesto y límites de tiempo establecidos.
 >Un ingeniero de software toma decisiones de negocio evaluando objetivos, presupuestos y límites de tiempo; también integra desarrolladores, crea productos de calidad y confiables. 
+
+
 >La ingeniería de software está basada fuertemente en procesos (_Un proceso define quien hace qué y cómo, para alcanzar un objetivo_) por lo que un proceso define una estructura para las actividades y acciones sobre la contrucción de software.
 >Estas actividades son: 
 > - Estructurales (Comunicación, Planeación, Modelado, Construcción, Despliegue).
 > - Sombrilla (Complementan y envuelven a las Estructurales).
+
+
 > Por último, como toda disciplina la Ing de software, tiene principios que ayudan y fomentan la elaboración de software de calidad, eficaz y confiable durante el ejercicio de la profesión.
 
 
