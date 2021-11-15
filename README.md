@@ -17,8 +17,8 @@ Estás preguntas se responden con el fin de justificar porqué se eligió cada a
 
 Este portafolio consta de 5 secciónes y 1 sección Preliminar que contiene el enunciado del presente proyecto.
 
-- [Preliminar](https://github.com/ricardochianc/Portafolio_IngSoftware/tree/preliminar)
-- Sección 1
+- [Preliminar](https://github.com/ricardochianc/Portafolio_IngSoftware/tree/main/preliminar)
+- [Sección 1](https://github.com/ricardochianc/Portafolio_IngSoftware/tree/main/Seccion1)
 - Sección 2
 - Sección 3
 - Sección 4
