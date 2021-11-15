@@ -8,8 +8,8 @@
 
 #### 1. ¿Por qué se eligió el artefacto?
 
-Considero que en esta actividad se englobó de forma práctica los temas de la sección 1, en este artefacto contiene:
-- Red de conceptos, en la cual se tenían que conectar y todos los temas de la sección 1. 
+Considero que en esta actividad se englobó de forma práctica los temas de la sección 1, este artefacto contiene:
+- Red de conceptos, en la cual se tenían que conectar todos los temas de la sección 1. 
 - Caso "Casa Segura", donde se tenía que analizar y resolver poniendo en práctica los conocimientos de la sección.
 - Juramento, basado en el "Código de ética de un Ingeniero de Software", ejercicio que me pareció muy interesante ya este tema tan importante nunca se llega a tratar en ningún curso.
 
